@@ -205,7 +205,7 @@ def sentiment_analysis(empresa_desarrolladora: str):
 
     return {empresa_desarrolladora: [Negative, Neutral, Positive]} 
     
-'''
+
 # End-point para obtener recomendaciones
 @app.get("/recomendacion_juego/{id}")
 def recomendacion_juego(id: str):
@@ -267,4 +267,4 @@ def print_memory_usage():
 
 # Llamada a la función para imprimir el tamaño de los objetos
 print_memory_usage()
-'''
+
