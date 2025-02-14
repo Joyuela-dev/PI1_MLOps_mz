@@ -12,7 +12,7 @@ df1 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_user_r
 
 # Carga el archivo Parquet 'Clean_output_steam_games.parquet' en DataFrame 'df2'
 df2 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_output_steam_games.parquet')
-
+'''
 # Carga el archivo Parquet 'Clean_australian_users_items.parquet' en DataFrame 'df3'
 #df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet')
 
@@ -52,7 +52,7 @@ tfidf_matrix = tfidf_vectorizer.fit_transform(CombFeatures())
 # Calcula la similitud del coseno entre juegos
 cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
 ########################################################################################################
-
+'''
 
 # End-point 1
 @app.get("/PlayTimeGenre/{genero}")
@@ -126,7 +126,7 @@ def UserForGenre(genero: str):
 
     return {f"Usuario con más horas jugadas para Género {genero}": max_playtime_user, "Horas jugadas": playtimeHrs_by_year_list}
     
-
+'''
 # End-point 3
 @app.get("/UsersRecommend/{annio}")
 def UsersRecommend(annio: int): 
@@ -267,4 +267,4 @@ def print_memory_usage():
 
 # Llamada a la función para imprimir el tamaño de los objetos
 print_memory_usage()
-
+'''
