@@ -12,7 +12,7 @@ df1 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_user_r
 
 # Carga el archivo Parquet 'Clean_output_steam_games.parquet' en DataFrame 'df2'
 df2 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_output_steam_games.parquet')
-
+'''
 # Carga el archivo Parquet 'Clean_australian_users_items.parquet' en DataFrame 'df3'
 #df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet')
 
@@ -25,7 +25,7 @@ columns_to_keep = ['item_id', 'item_name', 'playtime_forever', 'user_id']
 # Carga registros desde el archivo Parquet aplicando el filtro y especificando columnas
 df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet',
                       columns=columns_to_keep, filters=filters)
-'''
+
 ########################################################################################################
 # Carga el modelo de recomendación de juegos que será consumido por la funcion recomendacion_juego(id)
 ########################################################################################################
