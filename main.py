@@ -15,7 +15,7 @@ df2 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_output_steam_game
 
 # Carga el archivo Parquet 'Clean_australian_users_items.parquet' en DataFrame 'df3'
 #df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet')
-
+'''
 # Define filtro para cargar solo los registros con 'playtime_forever' mayor que 1000
 filters = [('playtime_forever', '>', 100000)]
 
@@ -25,7 +25,7 @@ columns_to_keep = ['item_id', 'item_name', 'playtime_forever', 'user_id']
 # Carga registros desde el archivo Parquet aplicando el filtro y especificando columnas
 df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet',
                       columns=columns_to_keep, filters=filters)
-'''
+
 ########################################################################################################
 # Carga el modelo de recomendación de juegos que será consumido por la funcion recomendacion_juego(id)
 ########################################################################################################
