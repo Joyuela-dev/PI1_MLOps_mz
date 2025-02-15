@@ -1,3 +1,4 @@
+import dask.dataframe as dd
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -21,11 +22,14 @@ filters = [('playtime_forever', '>', 100000)]
 
 # Especifica las columnas a cargar en el DataFrame
 columns_to_keep = ['item_id', 'item_name', 'playtime_forever', 'user_id']
-
+'''
 # Carga registros desde el archivo Parquet aplicando el filtro y especificando columnas
-df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet',
-                      columns=columns_to_keep, filters=filters)
+df3 = dd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet')
 
+''',
+                      columns=columns_to_keep, filters=filters)
+'''
+'''
 ########################################################################################################
 # Carga el modelo de recomendación de juegos que será consumido por la funcion recomendacion_juego(id)
 ########################################################################################################
