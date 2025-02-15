@@ -17,7 +17,7 @@ df2 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_output_steam_game
 #df3 = pd.read_parquet('Datasets/Clean_Parquet_Data_Steam/Clean_australian_users_items.parquet')
 
 # Define filtro para cargar solo los registros con 'playtime_forever' mayor que 1000
-filters = [('playtime_forever', '>', 30000)]
+filters = [('playtime_forever', '>', 50000)]
 
 # Especifica las columnas a cargar en el DataFrame
 columns_to_keep = ['item_id', 'item_name', 'playtime_forever', 'user_id']
